@@ -3,9 +3,18 @@ console.log('***** Music Collection *****')
 
 let myCollection = [];
 
+function addToCollection (collection, title, artist, yearPublished) {
+  let newAlbum = {
+    title: title,
+    artist: artist,
+    yearPublished: yearPublished
+  }
+  collection.push(newAlbum);
+  return newAlbum;
+}
 
-
-
+addToCollection (myCollection, `Faith`, `George Michael`, 1988);
+console.log(myCollection);
 
 
 
