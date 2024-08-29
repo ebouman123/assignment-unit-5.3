@@ -20,15 +20,16 @@ console.log(addToCollection (myCollection, `The Eminem Show`, `Eminem`, 2002));
 console.log(addToCollection (myCollection, `Get Rich or Die Tryin'`, `50 Cent`, 2003));
 console.log(addToCollection (myCollection, `Fearless`, `Taylor Swift`, 2009));
 
-
-
-
-
-
-
 console.log(myCollection);
 
 
+function showCollection (collection) {
+  for (let album of collection) {
+    console.log(`${album.title} by ${album.artist}, from year ${album.yearPublished}`)
+  }
+}
+
+showCollection (myCollection);
 
 
 
