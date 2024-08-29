@@ -17,7 +17,7 @@ console.log(addToCollection (myCollection, `Faith`, `George Michael`, 1988));
 console.log(addToCollection (myCollection, `Spice`, `Spice Girls`, 1997));
 console.log(addToCollection (myCollection, `Millennium`, `Backstreet Boys`, 1999));
 console.log(addToCollection (myCollection, `The Eminem Show`, `Eminem`, 2002));
-console.log(addToCollection (myCollection, `Get Rich or Die Tryin'`, `50 Cent`, 2003));
+console.log(addToCollection (myCollection, `Recovery`, `Eminem`, 2010));
 console.log(addToCollection (myCollection, `Fearless`, `Taylor Swift`, 2009));
 
 console.log(myCollection);
@@ -31,9 +31,22 @@ function showCollection (collection) {
 
 showCollection (myCollection);
 
+// Getting a "ReferenceError" while testing
 
 
 
+function findByArtist (collection, artist) {
+  let results = [];
+  for (let album of collection) {
+    if (album.artist === artist){
+      results.push(album);
+    }
+  }
+  return results;
+}
+
+console.log(findByArtist(myCollection, `Eminem`));
+console.log(findByArtist(myCollection, `Chappell Roan`));
 
 
 
