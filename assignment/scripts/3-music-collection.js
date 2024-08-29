@@ -10,10 +10,22 @@ function addToCollection (collection, title, artist, yearPublished) {
     yearPublished: yearPublished
   }
   collection.push(newAlbum);
-  return newAlbum;
+  return collection[collection.length-1];
 }
 
-addToCollection (myCollection, `Faith`, `George Michael`, 1988);
+console.log(addToCollection (myCollection, `Faith`, `George Michael`, 1988));
+console.log(addToCollection (myCollection, `Spice`, `Spice Girls`, 1997));
+console.log(addToCollection (myCollection, `Millennium`, `Backstreet Boys`, 1999));
+console.log(addToCollection (myCollection, `The Eminem Show`, `Eminem`, 2002));
+console.log(addToCollection (myCollection, `Get Rich or Die Tryin'`, `50 Cent`, 2003));
+console.log(addToCollection (myCollection, `Fearless`, `Taylor Swift`, 2009));
+
+
+
+
+
+
+
 console.log(myCollection);
 
 
