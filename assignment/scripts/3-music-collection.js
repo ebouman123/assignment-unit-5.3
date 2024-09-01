@@ -46,13 +46,30 @@ function findByArtist (collection, artist) {
 }
 
 console.log(findByArtist(myCollection, `Eminem`));
+console.log(findByArtist(myCollection, `Spice Girls`));
 console.log(findByArtist(myCollection, `Chappell Roan`));
 
 
 
+function search (collection, searchCriteria) {
+  let results = [];
+  for (let album of collection) {
+    if (album.artist === searchCriteria.artist && album.yearPublished === searchCriteria.yearPublished){
+      results.push(album);
+    }
+    else if (Object.keys(searchCriteria).length === 0 || searchCriteria === undefined || searchCriteria.artist === `` || searchCriteria.yearPublished === ``){
+      return collection;
+    }
+  }
+  return results;
+}
 
+let testSearch = {
+  artist: `Taylor Swift`,
+  yearPublished: `Fearless`
+}
 
-
+console.log(search(myCollection, testSearch));
 
 
 
